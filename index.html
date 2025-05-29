@@ -1,221 +1,135 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>muhrauf12</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
-    <link rel="stylesheet" href="index.css">
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/123526437?v=4" type="image/png"></head>
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo">MyName</div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section id="home" class="hero">
+      <h1>Hi, I’m MyName</h1>
+      <p>Full Stack Developer & Aspiring Software Engineer</p>
+      <a href="#contact" class="button">Contact Me</a>
+    </section>
+  </header>
 
-  <body>
-    <div id="loading">
-      <div id="spinner"></div>
+  <main>
+    <section id="about" class="panel">
+      <h2>About Me</h2>
+      <p>I’m a CS & DS student at University of Michigan with 3+ years of coding experience. I build full stack apps that users love.</p>
+      <div class="stats">
+        <div><strong>03+</strong><span>Years experience</span></div>
+        <div><strong>50+</strong><span>Projects done</span></div>
+        <div><strong>03+</strong><span>Internships</span></div>
+      </div>
+      <a href="#" class="button">Download CV</a>
+    </section>
+
+    <section id="skills" class="panel">
+      <h2>Skills</h2>
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="skill"><span>Python</span><div class="bar" style="width:95%"></div></div>
+        <div class="skill"><span>C++</span><div class="bar" style="width:90%"></div></div>
+        <div class="skill"><span>JavaScript</span><div class="bar" style="width:90%"></div></div>
+      </div>
+      <div class="skill-group">
+        <h3>Frontend</h3>
+        <div class="skill"><span>React</span><div class="bar" style="width:85%"></div></div>
+        <div class="skill"><span>HTML</span><div class="bar" style="width:90%"></div></div>
+        <div class="skill"><span>CSS</span><div class="bar" style="width:80%"></div></div>
+      </div>
+    </section>
+
+    <section id="services" class="panel">
+      <h2>Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Backend</h3>
+          <ul>
+            <li>System design</li>
+            <li>Database schemas</li>
+            <li>API endpoints</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Frontend</h3>
+          <ul>
+            <li>UI design</li>
+            <li>Component building</li>
+            <li>UX interactions</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Leadership</h3>
+          <ul>
+            <li>Team guiding</li>
+            <li>Cross-team work</li>
+            <li>Idea sharing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="panel">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <h4>EasyStock</h4>
+          <p>Data pipeline and forecast UI with React & Python.</p>
+          <a href="#">Demo & Docs</a>
+        </div>
+        <div class="project">
+          <h4>Access Assist</h4>
+          <p>Helps users find benefit programs near them.</p>
+          <a href="#">Live Site</a>
+        </div>
+        <div class="project">
+          <h4>Weather App</h4>
+          <p>Real-time forecast with Mapbox & Weatherstack APIs.</p>
+          <a href="#">View</a>
+        </div>
+        <!-- add more as needed -->
+      </div>
+    </section>
+
+    <section id="contact" class="panel">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <p><strong>Call</strong> 206 604 2662</p>
+        <p><strong>Email</strong> xinyup@umich.com</p>
+        <p><strong>Location</strong> Ann Arbor, MI</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 MyName. All rights reserved</p>
+    <div class="social">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Instagram</a>
     </div>
-    <div id="profile">
-      <div id="profile_img" style="background: url(https://avatars.githubusercontent.com/u/123526437?v=4) center;"></div>
-      <div id="username"><span style="display:block;">Muhammd Rauf</span><a href="https://github.com/muhrauf12">@muhrauf12</a></div>
-      <div id="userbio" style="display: block;">CS @ Umich
-</div>
-      <div id="about">
-                <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
-                <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
-                <span style="display:none;"><i class="fas fa-link"></i> &nbsp; <a href=""></a></span>
-                <span style="display:none;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; null</span>
-                <span style="display:none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
-                <div class="socials">
-                <span style="display:none !important;"><a href="https://www.twitter.com/null" target="_blank" class="socials"><i class="fab fa-twitter"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.dribbble.com/null" target="_blank" class="socials"><i class="fab fa-dribbble"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.linkedin.com/in/null/" target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.medium.com/@null/" target="_blank" class="socials"><i class="fab fa-medium-m"></i></a></span>
-                </div>
-                </div>
-    </div>
-    <div id="display">
-      <div id="work">
-        <h1>Work.</h1>
-        <div class="projects" id="work_section">
-                        <a href="https://github.com/raafeahmed/Task-Manager" target="_blank">
-                        <section>
-                            <div class="section_title">Task-Manager</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; CSS</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/muhrauf12/rauf.github.io" target="_blank">
-                        <section>
-                            <div class="section_title">rauf.github.io</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; HTML</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/muhrauf12/Task-Manager" target="_blank">
-                        <section>
-                            <div class="section_title">Task-Manager</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; CSS</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/muhrauf12/muhrauf12" target="_blank">
-                        <section>
-                            <div class="section_title">muhrauf12</div>
-                            <div class="about_section">
-                            <span style="display:block;">My personal Repository</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/muhrauf12/MDST-Tutorial" target="_blank">
-                        <section>
-                            <div class="section_title">MDST-Tutorial</div>
-                            <div class="about_section">
-                            <span style="display:block;">My tutorial materials for MDST</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/muhrauf12/481-1c" target="_blank">
-                        <section>
-                            <div class="section_title">481-1c</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Java</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/muhrauf12/Quack-" target="_blank">
-                        <section>
-                            <div class="section_title">Quack-</div>
-                            <div class="about_section">
-                            <span style="display:block;">Mhacks 17 </span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; HTML</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/muhrauf12/muhrauf12.github.io" target="_blank">
-                        <section>
-                            <div class="section_title">muhrauf12.github.io</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; TeX</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a></div>
-      </div>
-      <div id="forks" style="display:none;">
-        <h1>Forks.</h1>
-        <div class="projects" id="forks_section"></div>
-      </div>
-      <div id="blog_section">
-        <h1>Blog.</h1>
-        <div id="blogs"></div>
-      </div>
-      <div id="footer">
-        <a href="https://github.com/imfunniee" target="_blank">made on earth by a human</a>
-      </div>
-    </div>
-    <script type="text/javascript">
-      setTimeout(function() {
-        document.getElementById("loading").classList.add("animated");
-        document.getElementById("loading").classList.add("fadeOut");
-        setTimeout(function() {
-          document.getElementById("loading").classList.remove("animated");
-          document.getElementById("loading").classList.remove("fadeOut");
-          document.getElementById("loading").style.display = "none";
-        }, 800);
-      }, 1500);
-      $.getJSON("blog.json", function(blog) {
-        blog = blog || [];
-        if (blog.length == 0) {
-          return (document.getElementById("blog_section").style.display =
-            "none");
-        }
-        for (var i = 0; i < blog.length; i++) {
-          $("#blogs").append(`
-            <a href="./blog/${blog[i].url_title}/" target="_blank">
-                <section>
-                    <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
-                    <div class="blog_container">
-                        <div class="section_title">${blog[i].title}</div>
-                        <div class="about_section">
-                            ${blog[i].sub_title}
-                        </div>
-                    </div>
-                </section>
-            </a>
-            `);
-        }
-      }).fail(function() {
-        return (document.getElementById("blog_section").style.display = "none");
-      });
-    </script>
-
-    <script>
-      const magicProjectsGrid = new MagicGrid({
-        container: "#work_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
-
-      const magicForksGrid = new MagicGrid({
-        container: "#forks_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
-
-      $("document").ready(() => {
-        magicProjectsGrid.listen();
-        magicForksGrid.listen();
-      });
-    </script>
-  
-
-</body></html>
+  </footer>
+</body>
+</html>
